@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div *ngIf="!showTitle" class="logo-name">
+            <span class="word">STUDIO</span>
+            <span class="word">5  </span> 
+            <span class="word">PHOTOGRAPHY</span> 
+        </div>
+        <div *ngIf="showTitle" class="logo-name">
+            <span class="title">STUDIO 5 PHOTOGRAPHY</span>
+        </div>
+    </div>
+    <div class="logout">
+        <a (click)="logOutWithGoogle()">
+            Log Out
+        </a>
+    </div>
+    <div class="mx-3">
+        <a *ngIf="userObject && imageError">
+            {{userObject.firstName[0] + userObject.lastName[0]}}
+        </a>
+        <a *ngIf="userObject && !imageError">
+            <img [src]="userObject.photoUrl" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+        </a>
+    </div>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-list-4">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown dropstart text-end" [ngClass]="{'show': dropdownClicked}">
+                <a *ngIf="userObject && imageError" class="nav-link dropdown-toggle" 
+                id="navbarDropdownMenuLink" role="button" (click)="dropdownClicked = !dropdownClicked"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{userObject.firstName[0] + userObject.lastName[0]}}
+                </a>
+                <a *ngIf="userObject && !imageError" class="nav-link dropdown-toggle" 
+                id="navbarDropdownMenuLink" role="button" (click)="dropdownClicked = !dropdownClicked"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img [src]="userObject.photoUrl" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+                </a>
+                <div class="dropdown-menu dropdown-menu-start" [ngClass]="{'show': dropdownClicked}" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item">Log Out</a>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+  </nav>

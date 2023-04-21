@@ -1,0 +1,29 @@
+.logo-name {
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.word,
+.title {
+    display: inline-block;
+    line-height: 1em;
+    color: antiquewhite;
+}
+
+.logout {
+    color: antiquewhite;
+    width: 5rem;
+    cursor: pointer;
+    animation: right_to_left 3s ease;
+}
+
+@keyframes right_to_left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0;
+    }
+}
